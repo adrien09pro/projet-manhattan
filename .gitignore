@@ -1,4 +1,4 @@
-### node etc ###
+﻿### node etc ###
 
 # Logs
 data-node
@@ -72,7 +72,6 @@ bower_components/
 .flooignore
 
 #config file
-librechat.yaml
 librechat.yml
 
 # Environment
@@ -179,3 +178,4 @@ claude-flow
 hive-mind-prompt-*.txt
 CLAUDE.md
 .gsd
+

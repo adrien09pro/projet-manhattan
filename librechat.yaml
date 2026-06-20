@@ -19,12 +19,6 @@ endpoints:
     disabled: true
   anthropic:
     disabled: true
-  gptPlugins:
-    disabled: true
-  azureOpenAI:
-    disabled: true
-  bingAI:
-    disabled: true
   custom:
     # 1. OpenAI
     - name: "OpenAI"

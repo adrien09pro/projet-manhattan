@@ -114,7 +114,7 @@ endpoints:
     - name: "Image"
       apiKey: "user_provided"
       baseURL: "https://api.together.xyz/v1"
-      iconURL: "https://i.imgur.com/GuZwfgm.png"
+      iconURL: "https://i.imgur.com/AXO48ho.png"
       models:
         default: ["black-forest-labs/FLUX.1-schnell", "black-forest-labs/FLUX.1-dev", "black-forest-labs/FLUX.2-pro", "black-forest-labs/FLUX.2-max", "ideogram/ideogram-4.0", "wan/image-wan-2.6", "stabilityai/stable-diffusion-xl-base-1.0", "stabilityai/stable-diffusion-2.1", "runwayml/stable-diffusion-v1-5", "prompthero/openjourney", "SG163/Realistic_Vision_V3.0_VAE", "Wand/Image-Gen-v2"]
         fetch: false

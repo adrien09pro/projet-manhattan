@@ -1,0 +1,146 @@
+version: "1.2.8"
+cache: false
+
+interface:
+  appTitle: "Projet Manhattan"
+  endpointsMenu: true
+  modelSelect: true
+  parameters: true
+  sidePanel: true
+  presets: true
+
+# ---------------------------------------------------------------------------
+# CONFIGURATION DES ENDPOINTS
+# ---------------------------------------------------------------------------
+endpoints:
+  custom:
+    # 1. OpenAI
+    - name: "OpenAI"
+      apiKey: "user_provided"
+      baseURL: "https://api.openai.com/v1"
+      iconURL: "openAI"
+      models:
+        default: ["gpt-5.5", "gpt-5.5-pro", "gpt-5.4", "gpt-5.4-pro", "gpt-5.4-mini", "gpt-5.4-nano", "gpt-4o"]
+        fetch: false
+      titleConvo: true
+      titleModel: "gpt-4o"
+      summarize: false
+      modelDisplayLabel: "ChatGPT"
+
+    # 2. Anthropic
+    - name: "Anthropic AI"
+      provider: "anthropic"
+      apiKey: "user_provided"
+      baseURL: "https://api.anthropic.com"
+      iconURL: "https://cdn.simpleicons.org/claude/D97757"
+      headers:
+        anthropic-version: "2023-06-01"
+      models:
+        default: ["claude-opus-4-8", "claude-sonnet-4-6", "claude-haiku-4-5-20251001"]
+        fetch: false
+      titleConvo: true
+      titleModel: "claude-haiku-4-5-20251001"
+      summarize: false
+      modelDisplayLabel: "Claude"
+
+    # 3. Gemini
+    - name: "Gemini"
+      apiKey: "user_provided"
+      baseURL: "https://generativelanguage.googleapis.com/v1beta/openai/"
+      iconURL: "https://unpkg.com/@lobehub/icons-static-svg@latest/icons/gemini-color.svg"
+      dropParams: ["store"]
+      models:
+        default: ["gemini-3.5-flash", "gemini-3.1-pro-preview", "gemini-3.1-flash-lite"]
+        fetch: false
+      titleConvo: true
+      titleModel: "gemini-3.5-flash"
+      summarize: false
+      modelDisplayLabel: "Gemini"
+
+    # 4. CATEGORIE CHAT
+    - name: "Chat"
+      apiKey: "user_provided"
+      baseURL: "https://api.together.xyz/v1"
+      iconURL: "/logos/logo-chat.png"
+      models:
+        default: ["deepseek-v4-pro", "Qwen/Qwen3.7-Max", "Qwen/Qwen3.7-Plus", "Qwen/Qwen3.6-Plus", "Qwen/Qwen3.5-397B-A17B", "Qwen/Qwen3.5-9B", "Qwen/Qwen2.5-7B-Instruct-Turbo", "google/gemma-4-31b-it-pearl", "google/gemma-4-31b", "google/gemma-3n-e4b-instruct", "nvidia/nemotron-3-ultra", "minimax/m3", "minimax/m2.7", "minimax/m2.5", "kimi/k2.7-code", "kimi/k2.6", "gpt-oss-120b", "gpt-oss-20b", "lfm2-24b-a2b", "glm-5.1", "glm-5", "cogito-v2.1-671b", "rnj-1-instructions", "meta-llama/Llama-3.3-70B-Instruct", "meta-llama/Llama-3-8B-Instruct-Lite"]
+        fetch: false
+      titleConvo: true
+      titleModel: "Qwen/Qwen3.7-Max"
+      summarize: false
+
+    # 5. CATEGORIE VISION
+    - name: "Vision"
+      apiKey: "user_provided"
+      baseURL: "https://api.together.xyz/v1"
+      iconURL: "/logos/logo-vision.png"
+      models:
+        default: ["kimi/k2.7-code-vision", "google/gemma-3n-e4b-vision", "google/gemma-4-31b-vision", "kimi/k2.6-vision", "minimax/m3-vision", "Qwen/Qwen3.5-9B-Vision", "Qwen/Qwen3.6-Plus-Vision", "Qwen/Qwen3.7-Plus-Vision"]
+        fetch: false
+      titleConvo: true
+
+    # 6. CATEGORIE IMAGE (FLUX)
+    - name: "Image"
+      apiKey: "user_provided"
+      baseURL: "https://api.together.xyz/v1"
+      iconURL: "/logos/logo-image.png"
+      models:
+        default: ["black-forest-labs/FLUX.1-schnell", "black-forest-labs/FLUX.1-dev", "black-forest-labs/FLUX.2-pro", "black-forest-labs/FLUX.2-max", "ideogram/ideogram-4.0", "wan/image-wan-2.6", "stabilityai/stable-diffusion-xl-base-1.0", "stabilityai/stable-diffusion-2.1", "runwayml/stable-diffusion-v1-5", "prompthero/openjourney", "SG163/Realistic_Vision_V3.0_VAE", "Wand/Image-Gen-v2"]
+        fetch: false
+      titleConvo: false
+      summarize: false
+
+    # 7. CATEGORIE AUDIO
+    - name: "Audio"
+      apiKey: "user_provided"
+      baseURL: "https://api.together.xyz/v1"
+      iconURL: "/logos/logo-audio.png"
+      models:
+        default: ["openai/whisper-large-v3", "cartesia/sonic-3", "kokoro-82m-tts"]
+        fetch: false
+      titleConvo: true
+
+    # 8. CATEGORIE VIDEO
+    - name: "Vidéo"
+      apiKey: "user_provided"
+      baseURL: "https://api.together.xyz/v1"
+      iconURL: "/logos/logo-video.png"
+      models:
+        default: ["openai/sora-2", "google/veo-3.0", "kling/kling-2.1-pro", "wan/wan-2.2-t2v"]
+        fetch: false
+      titleConvo: false
+      summarize: false
+
+# ---------------------------------------------------------------------------
+# SECURITE, FICHIERS & ARBORESCENCE MEMOIRE INTERNE
+# ---------------------------------------------------------------------------
+fileConfig:
+  endpoints:
+    default:
+      fileLimit: 10
+      fileSizeLimit: 25
+      totalSizeLimit: 100
+      supportedMimeTypes: ["image/.*", "application/pdf", "text/.*"]
+  serverFileSizeLimit: 100
+  avatarSizeLimit: 2
+  imageOutputType: "png"
+
+memory:
+  enabled: true
+  embeddingModel: "text-embedding-3-large"
+  topK: 5
+  chunkSize: 1500
+  chunkOverlap: 200
+  folders:
+    - name: "Memoire Interne Generale"
+      description: "Dossier racine centralisant toutes les connaissances du Projet Manhattan."
+      subfolders:
+        - name: "prompts generaux"
+        - name: "marketing"
+        - name: "branding"
+        - name: "business plan"
+        - name: "financement"
+        - name: "gestion et comptabilite"
+        - name: "juridique et statuts"
+        - name: "textile et sourcing"
+        - name: "autre"

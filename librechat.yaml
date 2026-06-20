@@ -13,6 +13,12 @@ interface:
 # CONFIGURATION DES ENDPOINTS
 # ---------------------------------------------------------------------------
 endpoints:
+  openAI:
+    disabled: true
+  google:
+    disabled: true
+  anthropic:
+    disabled: true
   custom:
     # 1. OpenAI
     - name: "OpenAI"
@@ -27,7 +33,7 @@ endpoints:
       summarize: false
       modelDisplayLabel: "ChatGPT"
 
-    # 2. Anthropic
+    # 2. Anthropic AI
     - name: "Anthropic AI"
       provider: "anthropic"
       apiKey: "user_provided"
@@ -61,7 +67,7 @@ endpoints:
     - name: "Chat"
       apiKey: "user_provided"
       baseURL: "https://api.together.xyz/v1"
-      iconURL: "/logos/logo-chat.png"
+      iconURL: "https://i.imgur.com/vE9lnI5.png"
       models:
         default: ["deepseek-v4-pro", "Qwen/Qwen3.7-Max", "Qwen/Qwen3.7-Plus", "Qwen/Qwen3.6-Plus", "Qwen/Qwen3.5-397B-A17B", "Qwen/Qwen3.5-9B", "Qwen/Qwen2.5-7B-Instruct-Turbo", "google/gemma-4-31b-it-pearl", "google/gemma-4-31b", "google/gemma-3n-e4b-instruct", "nvidia/nemotron-3-ultra", "minimax/m3", "minimax/m2.7", "minimax/m2.5", "kimi/k2.7-code", "kimi/k2.6", "gpt-oss-120b", "gpt-oss-20b", "lfm2-24b-a2b", "glm-5.1", "glm-5", "cogito-v2.1-671b", "rnj-1-instructions", "meta-llama/Llama-3.3-70B-Instruct", "meta-llama/Llama-3-8B-Instruct-Lite"]
         fetch: false
@@ -73,7 +79,7 @@ endpoints:
     - name: "Vision"
       apiKey: "user_provided"
       baseURL: "https://api.together.xyz/v1"
-      iconURL: "/logos/logo-vision.png"
+      iconURL: "https://i.imgur.com/yuWUbqi.png"
       models:
         default: ["kimi/k2.7-code-vision", "google/gemma-3n-e4b-vision", "google/gemma-4-31b-vision", "kimi/k2.6-vision", "minimax/m3-vision", "Qwen/Qwen3.5-9B-Vision", "Qwen/Qwen3.6-Plus-Vision", "Qwen/Qwen3.7-Plus-Vision"]
         fetch: false
@@ -83,7 +89,7 @@ endpoints:
     - name: "Image"
       apiKey: "user_provided"
       baseURL: "https://api.together.xyz/v1"
-      iconURL: "/logos/logo-image.png"
+      iconURL: "https://i.imgur.com/GuZwfgm.png"
       models:
         default: ["black-forest-labs/FLUX.1-schnell", "black-forest-labs/FLUX.1-dev", "black-forest-labs/FLUX.2-pro", "black-forest-labs/FLUX.2-max", "ideogram/ideogram-4.0", "wan/image-wan-2.6", "stabilityai/stable-diffusion-xl-base-1.0", "stabilityai/stable-diffusion-2.1", "runwayml/stable-diffusion-v1-5", "prompthero/openjourney", "SG163/Realistic_Vision_V3.0_VAE", "Wand/Image-Gen-v2"]
         fetch: false
@@ -94,7 +100,7 @@ endpoints:
     - name: "Audio"
       apiKey: "user_provided"
       baseURL: "https://api.together.xyz/v1"
-      iconURL: "/logos/logo-audio.png"
+      iconURL: "https://i.imgur.com/bwpD8Ts.png"
       models:
         default: ["openai/whisper-large-v3", "cartesia/sonic-3", "kokoro-82m-tts"]
         fetch: false
@@ -104,7 +110,7 @@ endpoints:
     - name: "Vidéo"
       apiKey: "user_provided"
       baseURL: "https://api.together.xyz/v1"
-      iconURL: "/logos/logo-video.png"
+      iconURL: "https://i.imgur.com/QsTyQQQ.png"
       models:
         default: ["openai/sora-2", "google/veo-3.0", "kling/kling-2.1-pro", "wan/wan-2.2-t2v"]
         fetch: false

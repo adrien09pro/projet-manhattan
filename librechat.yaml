@@ -88,56 +88,56 @@ endpoints:
       summarize: false
       modelDisplayLabel: "Cohere"
 
-    # 6. CATEGORIE CHAT
+    # 6. CATEGORIE CHAT (Together AI)
     - name: "Chat"
       apiKey: "user_provided"
       baseURL: "https://api.together.xyz/v1"
       iconURL: "https://i.imgur.com/vE9lnI5.png"
       models:
-        default: ["deepseek-v4-pro", "Qwen/Qwen3.7-Max", "Qwen/Qwen3.7-Plus", "Qwen/Qwen3.6-Plus", "Qwen/Qwen3.5-397B-A17B", "Qwen/Qwen3.5-9B", "Qwen/Qwen2.5-7B-Instruct-Turbo", "google/gemma-4-31b-it-pearl", "google/gemma-4-31b", "google/gemma-3n-e4b-instruct", "nvidia/nemotron-3-ultra", "minimax/m3", "minimax/m2.7", "minimax/m2.5", "kimi/k2.7-code", "kimi/k2.6", "gpt-oss-120b", "gpt-oss-20b", "lfm2-24b-a2b", "glm-5.1", "glm-5", "cogito-v2.1-671b", "rnj-1-instructions", "meta-llama/Llama-3.3-70B-Instruct", "meta-llama/Llama-3-8B-Instruct-Lite"]
+        default: ["deepseek-ai/DeepSeek-V4-Pro", "Qwen/Qwen3.7-Max", "Qwen/Qwen3.6-Plus", "Qwen/Qwen3.5-397B-A17B", "Qwen/Qwen3.5-9B-FP8", "Qwen/Qwen2.5-7B-Instruct-Turbo", "google/gemma-4-31b-it-fp8", "pearl-ai/gemma-4-31b-it-pearl", "google/gemma-3n-e4b-instruct", "nvidia/nemotron-3-ultra-550b-a55b-nvfp4", "minimax/minimax-m3", "minimax/minimax-m2.7-fp4", "moonshot/kimi-k2.7-code", "moonshot/kimi-k2.6-fp4", "openai/gpt-oss-120b", "openai/gpt-oss-20b", "togethercomputer/lfm2-24b-a2b", "zai-org/glm-5.2", "zai-org/glm-5.1-fp4", "zai-org/glm-5-fp4", "deepcogito/cogito-v2.1-671b", "essential-ai/rnj-1-instruct", "meta-llama/Llama-3.3-70B-Instruct-Turbo", "meta-llama/Llama-3-8B-Instruct-Lite", "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8"]
         fetch: false
       titleConvo: true
-      titleModel: "Qwen/Qwen3.7-Max"
+      titleModel: "deepseek-ai/DeepSeek-V4-Pro"
       summarize: false
 
-    # 7. CATEGORIE VISION
+    # 7. CATEGORIE VISION (Together AI)
     - name: "Vision"
       apiKey: "user_provided"
       baseURL: "https://api.together.xyz/v1"
       iconURL: "https://i.imgur.com/yuWUbqi.png"
       models:
-        default: ["kimi/k2.7-code-vision", "google/gemma-3n-e4b-vision", "google/gemma-4-31b-vision", "kimi/k2.6-vision", "minimax/m3-vision", "Qwen/Qwen3.5-9B-Vision", "Qwen/Qwen3.6-Plus-Vision", "Qwen/Qwen3.7-Plus-Vision"]
+        default: ["moonshot/kimi-k2.7-code-vision", "google/gemma-3n-e4b-vision", "google/gemma-4-31b-vision", "moonshot/kimi-k2.6-vision", "minimax/minimax-m3-vision", "Qwen/Qwen3.5-9B-Vision", "Qwen/Qwen3.6-Plus-Vision", "Qwen/Qwen3.7-Plus-Vision"]
         fetch: false
       titleConvo: true
 
-    # 8. CATEGORIE IMAGE (FLUX)
+    # 8. CATEGORIE IMAGE (Together AI)
     - name: "Image"
       apiKey: "user_provided"
       baseURL: "https://api.together.xyz/v1"
       iconURL: "https://i.imgur.com/AXO48ho.png"
       models:
-        default: ["black-forest-labs/FLUX.1-schnell", "black-forest-labs/FLUX.1-dev", "black-forest-labs/FLUX.2-pro", "black-forest-labs/FLUX.2-max", "ideogram/ideogram-4.0", "wan/image-wan-2.6", "stabilityai/stable-diffusion-xl-base-1.0", "stabilityai/stable-diffusion-2.1", "runwayml/stable-diffusion-v1-5", "prompthero/openjourney", "SG163/Realistic_Vision_V3.0_VAE", "Wand/Image-Gen-v2"]
+        default: ["black-forest-labs/FLUX.1-schnell", "black-forest-labs/FLUX.2-dev", "black-forest-labs/FLUX.2-flex", "black-forest-labs/FLUX.2-pro", "black-forest-labs/FLUX.2-max", "black-forest-labs/FLUX.1-kontext-pro", "black-forest-labs/FLUX.1-kontext-max", "black-forest-labs/FLUX1.1-pro", "ideogram/ideogram-4.0", "ideogram/ideogram-3.0", "openai/gpt-image-1.5", "openai/gpt-image-2", "bytedance/seedream-3.0", "bytedance/seedream-4.0", "bytedance/seedream-5.0-lite", "google/imagen-4.0-fast", "google/imagen-4.0-ultra", "google/imagen-4.0-preview", "wan-ai/wan-2.6-image", "stabilityai/stable-diffusion-xl-base-1.0", "rundiffusion/juggernaut-lightning-flux", "rundiffusion/juggernaut-pro-flux"]
         fetch: false
       titleConvo: false
       summarize: false
 
-    # 9. CATEGORIE AUDIO
+    # 9. CATEGORIE AUDIO (Together AI)
     - name: "Audio"
       apiKey: "user_provided"
       baseURL: "https://api.together.xyz/v1"
       iconURL: "https://i.imgur.com/bwpD8Ts.png"
       models:
-        default: ["openai/whisper-large-v3", "cartesia/sonic-3", "kokoro-82m-tts"]
+        default: ["openai/whisper-large-v3", "cartesia/sonic-3", "cartesia/sonic-2", "cartesia/sonic", "hexgrad/kokoro-82m", "canopy-labs/orpheus-3b-0.1-ft"]
         fetch: false
       titleConvo: true
 
-    # 10. CATEGORIE VIDEO
+    # 10. CATEGORIE VIDEO (Together AI)
     - name: "Vidéo"
       apiKey: "user_provided"
       baseURL: "https://api.together.xyz/v1"
       iconURL: "https://i.imgur.com/QsTyQQQ.png"
       models:
-        default: ["openai/sora-2", "google/veo-3.0", "kling/kling-2.1-pro", "wan/wan-2.2-t2v"]
+        default: ["openai/sora-2", "openai/sora-2-pro", "google/veo-3.0-fast-audio", "google/veo-3.0-audio", "google/veo-3.0-fast", "google/veo-2.0", "google/veo-3.1", "google/veo-3.1-lite", "kwaivgi/kling-2.1-pro", "kwaivgi/kling-2.1-master", "kwaivgi/kling-2.1-standard", "wan-ai/wan-2.2-t2v", "wan-ai/wan-2.2-i2v", "wan-ai/wan-2.7-t2v", "wan-ai/wan-2.7-i2v", "bytedance/seedance-1.0-pro", "bytedance/seedance-1.0-lite", "bytedance/seedance-2.0", "minimax/hailuo-02", "pixverse/pixverse-v5", "pixverse/pixverse-v5.6", "pixverse/pixverse-v6", "vidu/vidu-q1", "vidu/vidu-q3", "vidu/vidu-2.0"]
         fetch: false
       titleConvo: false
       summarize: false

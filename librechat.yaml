@@ -19,6 +19,12 @@ endpoints:
     disabled: true
   anthropic:
     disabled: true
+  gptPlugins:
+    disabled: true
+  azureOpenAI:
+    disabled: true
+  bingAI:
+    disabled: true
   custom:
     # 1. OpenAI
     - name: "OpenAI"
@@ -42,10 +48,10 @@ endpoints:
       headers:
         anthropic-version: "2023-06-01"
       models:
-        default: ["claude-opus-4-8", "claude-sonnet-4-6", "claude-haiku-4-5-20251001"]
+        default: ["claude-opus-4-8", "claude-sonnet-4-6", "claude-haiku-4-5"]
         fetch: false
       titleConvo: true
-      titleModel: "claude-haiku-4-5-20251001"
+      titleModel: "claude-haiku-4-5"
       summarize: false
       modelDisplayLabel: "Claude"
 
@@ -63,7 +69,32 @@ endpoints:
       summarize: false
       modelDisplayLabel: "Gemini"
 
-    # 4. CATEGORIE CHAT
+    # 4. DeepSeek
+    - name: "DeepSeek"
+      apiKey: "user_provided"
+      baseURL: "https://api.deepseek.com/v1"
+      iconURL: "https://cdn.simpleicons.org/deepseek/4D6BFE"
+      models:
+        default: ["deepseek-chat", "deepseek-reasoner"]
+        fetch: false
+      titleConvo: true
+      titleModel: "deepseek-chat"
+      summarize: false
+      modelDisplayLabel: "DeepSeek"
+
+    # 5. Cohere
+    - name: "Cohere"
+      apiKey: "user_provided"
+      baseURL: "https://api.cohere.ai/compatibility/v1"
+      models:
+        default: ["command-r-plus", "command-r", "command"]
+        fetch: false
+      titleConvo: true
+      titleModel: "command-r-plus"
+      summarize: false
+      modelDisplayLabel: "Cohere"
+
+    # 6. CATEGORIE CHAT
     - name: "Chat"
       apiKey: "user_provided"
       baseURL: "https://api.together.xyz/v1"
@@ -75,7 +106,7 @@ endpoints:
       titleModel: "Qwen/Qwen3.7-Max"
       summarize: false
 
-    # 5. CATEGORIE VISION
+    # 7. CATEGORIE VISION
     - name: "Vision"
       apiKey: "user_provided"
       baseURL: "https://api.together.xyz/v1"
@@ -85,7 +116,7 @@ endpoints:
         fetch: false
       titleConvo: true
 
-    # 6. CATEGORIE IMAGE (FLUX)
+    # 8. CATEGORIE IMAGE (FLUX)
     - name: "Image"
       apiKey: "user_provided"
       baseURL: "https://api.together.xyz/v1"
@@ -96,7 +127,7 @@ endpoints:
       titleConvo: false
       summarize: false
 
-    # 7. CATEGORIE AUDIO
+    # 9. CATEGORIE AUDIO
     - name: "Audio"
       apiKey: "user_provided"
       baseURL: "https://api.together.xyz/v1"
@@ -106,7 +137,7 @@ endpoints:
         fetch: false
       titleConvo: true
 
-    # 8. CATEGORIE VIDEO
+    # 10. CATEGORIE VIDEO
     - name: "Vidéo"
       apiKey: "user_provided"
       baseURL: "https://api.together.xyz/v1"

@@ -142,6 +142,18 @@ endpoints:
       titleConvo: false
       summarize: false
 
+    # 11. CATEGORIE DOCUMENTS (Together AI)
+    - name: "Documents"
+      apiKey: "user_provided"
+      baseURL: "https://api.together.xyz/v1"
+      iconURL: "https://i.imgur.com/UKVBDdO.png"
+      models:
+        default: ["meta-llama/Llama-3.3-70B-Instruct-Turbo", "deepseek-ai/DeepSeek-V4-Pro", "Qwen/Qwen3.7-Max", "Qwen/Qwen3.6-Plus", "minimax/minimax-m3", "moonshot/kimi-k2.7-code"]
+        fetch: false
+      titleConvo: true
+      titleModel: "meta-llama/Llama-3.3-70B-Instruct-Turbo"
+      summarize: false
+
 # ---------------------------------------------------------------------------
 # SECURITE, FICHIERS & ARBORESCENCE MEMOIRE INTERNE
 # ---------------------------------------------------------------------------
